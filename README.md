@@ -15,18 +15,19 @@ CXOverlay
 
 ### Full API:
 
-    CXOverlay
+CXOverlay
+
+    @property (nonatomic) UIColor *color;
+    @property (nonatomic) CGRect cutout;
 
     - (instancetype)initWithColor:(UIColor *)color;
     - (instancetype)initWithColor:(UIColor *)color andCutout:(CGRect)cutout;
 
-    - (void)setCutout:(CGRect)cutout;
     - (void)setCutout:(CGRect)cutout withDuration:(NSTimeInterval)duration;
     - (void)setCutout:(CGRect)cutout withDuration:(NSTimeInterval)duration andDelay:(NSTimeInterval)delay;
     - (void)setCutout:(CGRect)cutout withDuration:(NSTimeInterval)duration andDelay:(NSTimeInterval)delay andCompletion:(void (^)(BOOL finished))completion;
 
-    UIView (CXOverlay)
+UIView (CXOverlay)
 
-    - (void)setOverlay:(CXOverlay *)overlay;
-    - (CXOverlay *)overlay;
+    @property (readwrite) CXOverlay *overlay;
     

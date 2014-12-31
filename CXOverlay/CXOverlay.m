@@ -13,7 +13,6 @@
 
 @interface CXOverlay ()
 
-@property (nonatomic) CGRect cutout;
 @property (nonatomic) BOOL waiting;
 
 @end
@@ -46,7 +45,7 @@
     return self;
 }
 
-#pragma mark - Color
+#pragma mark - Color setters
 
 - (void)setColor:(UIColor *)color
 {
@@ -55,7 +54,7 @@
     [self setNeedsDisplay];
 }
 
-#pragma mark - Cutouts
+#pragma mark - Cutout setters
 
 - (void)setCutout:(CGRect)cutout
 {
