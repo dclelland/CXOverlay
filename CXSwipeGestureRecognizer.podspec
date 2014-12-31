@@ -16,4 +16,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target   = '7.0'
   s.ios.source_files        = 'CXOverlay/*.{h,m}'
   s.requires_arc            = true
+
+  s.dependency 'Masonry'
+  s.dependency 'ObjectiveSugar'
 end
