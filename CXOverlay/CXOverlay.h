@@ -10,11 +10,9 @@
 
 @interface CXOverlay : UIView
 
-@property (nonatomic) UIColor *color;
 @property (nonatomic) CGRect cutout;
 
-- (instancetype)initWithColor:(UIColor *)color;
-- (instancetype)initWithColor:(UIColor *)color andCutout:(CGRect)cutout;
+- (instancetype)initWithCutout:(CGRect)cutout;
 
 - (void)setCutout:(CGRect)cutout withDuration:(NSTimeInterval)duration;
 - (void)setCutout:(CGRect)cutout withDuration:(NSTimeInterval)duration andDelay:(NSTimeInterval)delay;

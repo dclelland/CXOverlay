@@ -5,8 +5,9 @@ CXOverlay
 
 ✓ UIView category convenience methods
 
-    self.view.overlay = [[CXOverlay alloc] initWithColor:[UIColor colorWithWhite:0.0f alpha:0.5f]];
+    self.view.overlay = [[CXOverlay alloc] init];
     self.view.overlay.cutout = CGRectMake(24.0f, 24.0f, 44.0f, 44.0f);
+    self.view.overlay.backgroundColor = [UIColor orangeColor];
     self.view.overlay = nil;
 
 ✓ Supports animation with a crossfade effect.
@@ -17,11 +18,9 @@ CXOverlay
 
 CXOverlay
 
-    @property (nonatomic) UIColor *color;
     @property (nonatomic) CGRect cutout;
 
-    - (instancetype)initWithColor:(UIColor *)color;
-    - (instancetype)initWithColor:(UIColor *)color andCutout:(CGRect)cutout;
+    - (instancetype)initWithCutout:(CGRect)cutout;
 
     - (void)setCutout:(CGRect)cutout withDuration:(NSTimeInterval)duration;
     - (void)setCutout:(CGRect)cutout withDuration:(NSTimeInterval)duration andDelay:(NSTimeInterval)delay;

@@ -19,39 +19,16 @@
 
 @implementation CXOverlay
 
-- (instancetype)init
-{
-    return [self initWithColor:[UIColor colorWithWhite:0.0f alpha:0.5f]];
-}
-
-- (instancetype)initWithColor:(UIColor *)color
+- (instancetype)initWithCutout:(CGRect)cutout
 {
     self = [super init];
     if (self) {
         self.opaque = NO;
+        self.backgroundColor = [UIColor colorWithWhite:0.0f alpha:0.5f];
         
-        _color = color;
         _cutout = CGRectNull;
     }
     return self;
-}
-
-- (instancetype)initWithColor:(UIColor *)color andCutout:(CGRect)cutout
-{
-    self = [self initWithColor:color];
-    if (self) {
-        [self setCutout:cutout];
-    }
-    return self;
-}
-
-#pragma mark - Color setters
-
-- (void)setColor:(UIColor *)color
-{
-    if ([_color isEqual:color]) return;
-    _color = color;
-    [self setNeedsDisplay];
 }
 
 #pragma mark - Cutout setters
@@ -91,10 +68,9 @@
 
 - (void)drawRect:(CGRect)rect
 {
-    CGContextRef context = UIGraphicsGetCurrentContext();
+    NSLog(@"drawRect: bounds: %@ cutout: %@", NSStringFromCGRect(self.bounds), NSStringFromCGRect(self.cutout));
     
-    CGContextSetFillColorWithColor(context, self.color.CGColor);
-    CGContextFillRect(context, self.bounds);
+    CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextClearRect(context, self.cutout);
 }
 
