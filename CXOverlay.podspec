@@ -6,12 +6,12 @@
 #
 Pod::Spec.new do |s|
   s.name                    = "CXOverlay"
-  s.version                 = "0.0.2"
+  s.version                 = "0.1.0"
   s.summary                 = "Basic UIView overlay (for tutorials etc.)"
   s.homepage                = "https://github.com/dclelland/CXOverlay"
   s.license                 = { :type => 'MIT' }
   s.author                  = { "Daniel Clelland" => "daniel.clelland@gmail.com" }
-  s.source                  = { :git => "https://github.com/dclelland/CXOverlay.git", :tag => "0.0.2" }
+  s.source                  = { :git => "https://github.com/dclelland/CXOverlay.git", :tag => "0.1.0" }
   s.platform                = :ios, '7.0'
   s.ios.deployment_target   = '7.0'
   s.ios.source_files        = 'CXOverlay/*.{h,m}'
