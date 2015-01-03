@@ -1,7 +1,7 @@
 CXOverlay
 =========
 
-### Basic UIView overlay (for tutorials etc.). Inserts itself under all other subviews and uses `drawRect:` to cover the canvas with a colour and then cut out a CGRect.
+Basic UIView overlay (for tutorials etc.). Inserts itself under all other subviews and uses `drawRect:` to cover the canvas with a colour and then cut out a CGRect.
 
 ✓ UIView category convenience methods
 
